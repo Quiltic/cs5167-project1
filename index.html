@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+
+<html>
+
+<head>
+    <title>Plant Pot UI</title>
+</head>
+
+<body>
+    <div style="color: #E5E5E5;">
+        <img src="./Icons/pot.png" alt="Where this UI sits on pot" style="width: 20%; margin-right: 10px;">
+    
+        <h1 style="width: 80%; padding-top: 50px;">Project 1: Single plant pot</h1>
+    <h3 style="width: 80%;">Joshua Zack</h3>
+    <a href="https://joshuamarkzack.wixsite.com/my-site/cs5167-project1" style="font-size: large; color: lightblue; width: 80%;">Link to Documentation</a>
+    </div>
+    
+
+    <div class="viewport_window">
+        <div class="main_ui">
+            <div class="little_bar"></div>
+            <div class="block" id="block_0">
+                <img id="pic_water" src="/Icons/water_damp.png" alt="Good Water" style="width:100px;height:100px;">
+                <div class="bar_water" id="progress_water">
+                    <div id="bar_water">Water: 50%</div>
+                </div>
+                <!-- <h1>Water (with Bar) (potentaly water fills up)</h1>
+                <p>Dry/Moist/Damp/Flooded</p> -->
+            </div>
+            <div class="block" id="block_1">
+                <img id="pic_sun" src="/Icons/sun_bright.png" alt="Good Sun" style="width:100px;height:100px;">
+                <div class="bar_sun" id="progress_sun">
+                    <div id="bar_sun">Sun: 50%</div>
+                </div>
+                <!-- <h1>Sun (with Bar) (Sun potentaly gets brighter)</h1>
+                <p>Dark/Shaded/Bright/SunBurnt</p> -->
+            </div>
+            <div class="block" id="block_2">
+                <img id="pic_temp" src="/Icons/temp_good.png" alt="Good Temp" style="width:100px;height:100px;">
+                <div class="bar_temp" id="progress_temp">
+                    <div id="bar_temp">Temp: 50%</div>
+                </div>
+                <!-- <h1>Tempeture (With bar) (temp gets hotter and colder)</h1>
+                <p>Temp (in C) Temp (in F)</p> -->
+            </div>
+            <canvas id="chart" style="width:100%;max-width:600px;height: 250px;" hidden="true"></canvas>
+        </div>
+        <div class="buttons">
+            <div class="little_bar"></div>
+            <img src="/Icons/Arrow2.png" alt="Up Button" style="rotate: 180deg; width:100px;height:100px;" onclick="change_selected(2)">
+            <img src="/Icons/Button2.png" alt="Select Button" style="rotate: 90deg;width:100px;height:100px;" onclick="switch_state()" id="select_button">
+            <img src="/Icons/Arrow2.png" alt="Down Button" style="width:100px;height:100px;" onclick="change_selected(1)">
+        </div>
+    </div>
+
+    <div style="margin-top: 60px; background-color: #E5E5E5; border-radius: 10px;">
+        <h2 style="margin: 10px;">Dev Tool</h2>
+        <button onclick="water_plant()" style="padding: 2px; margin:20px;">Water Plant</button>
+        <!-- <button style="padding: 2px; margin:20px;">Speed up time</button> -->
+
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="script.js"></script>
